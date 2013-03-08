@@ -9,7 +9,7 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , engine = require('ejs-locals')
-  , config = require('fi-tube_config');
+  , config = require('./fi-tube_config');
 
 var app = express();
 
