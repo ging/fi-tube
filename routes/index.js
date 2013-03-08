@@ -10,7 +10,13 @@ exports.index = function(req, res){
 
 	fs.readdir(config.video_path, function (err, files) {
 		console.log(files, err);
-		res.render('index', {files: files});
+		var videos = {};
+		var index = 0;
+		files.forEach (function (f) {
+			videos[index] = f;
+			index++;
+		});
+		res.render('index', {files: videos});
 	});
 
   	

@@ -7,12 +7,14 @@
 	<script type="text/javascript">
 
 	window.onload = function () {
-		<% files.forEach( function(video){ %>
-			document.getElementById("<%- video %>").onclick = function () {
+		<%  for (var i in files) {
+			var video = files[i];
+		 %>
+			document.getElementById("<%- i %>").onclick = function () {
 				console.log("<%- video %>");
 				document.getElementById("video").src = "videos/<%- video %>";
 			};
-		<% }); %>
+		<% }; %>
 	}
 
 	</script>

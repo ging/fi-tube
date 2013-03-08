@@ -5,12 +5,13 @@
 List of available videos:  
 <% 
 
-files.forEach( function(video){ 
+for (var i in files) {
+	var video = files[i];
 	var name = video.replace(/\..*/g, '');
 %>
-  <p>- <a class="clicable" id=<%- video %>><%- name %></a></p>
+  <p>- <a class="clicable" id=<%- i %>><%- name %></a></p>
   
-<% }); %>
+<% }; %>
 </div>
 <video id="video" src="" controls>
 <p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
