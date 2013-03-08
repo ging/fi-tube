@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+
+   <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+	<script type="text/javascript">
+
+	window.onload = function () {
+		<% files.forEach( function(video){ %>
+			document.getElementById("<%- video %>").onclick = function () {
+				console.log("<%- video %>");
+				document.getElementById("video").src = "videos/<%- video %>";
+			};
+		<% }); %>
+	}
+
+	</script>
+
+   <title>Fi-tube</title>
+</head>
+<body>
+	<div id="bar">
+		<img id="logo" src="images/FI-TUBE2.png">
+	</div>
+	<h1></h1>
+
+	<body>
+	<%- body %>
+	</body>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<% layout('layout') -%>
+
+
+<div id="list">
+List of available videos:  
+<% 
+
+files.forEach( function(video){ 
+	var name = video.replace(/\..*/g, '');
+%>
+  <p>- <a class="clicable" id=<%- video %>><%- name %></a></p>
+  
+<% }); %>
+</div>
+<video id="video" src="" controls>
+<p>If you are reading this, it is because your browser does not support the HTML5 video element.</p>
+</video>

@@ -1,0 +1,46 @@
+body {
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+  height: 100%;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#bar {
+	width: 100%;
+	height: 50px;
+	background: #f1f1f1;
+	border-bottom: 1px solid #e8e8e8;
+	top: 0px;
+}
+
+.clicable {
+	cursor: pointer;
+}
+
+#list {
+	top: 50px;
+	padding-top: 50px;
+	padding-left: 50px;
+	position: absolute;
+	border-right: 1px solid #e8e8e8;
+	height: 100%;
+	width: 250px;
+}
+
+#video {
+	position: absolute;
+	width: 640px;
+	height: 480px;
+	background-color: black;
+	margin-left: 340px;
+}
+
+#logo {
+	margin-left: 50px;
+	top: 0px;
+	height: 50px;
+}
