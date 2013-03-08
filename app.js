@@ -17,7 +17,7 @@ app.configure(function(){
   app.engine('ejs', engine);
   app.set('port', process.env.PORT || 8080);
   app.set('views', __dirname + '/views');
-  app.set('videos', config.video_path);
+  app.use('/videos', express.static(config.video_path));
   app.set('view engine', 'ejs');
   app.use(express.favicon());
   app.use(express.logger('dev'));
