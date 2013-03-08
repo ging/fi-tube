@@ -8,7 +8,8 @@ var express = require('express')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path')
-  , engine = require('ejs-locals');
+  , engine = require('ejs-locals')
+  , config = require('fi-tube_config');
 
 var app = express();
 
@@ -16,6 +17,7 @@ app.configure(function(){
   app.engine('ejs', engine);
   app.set('port', process.env.PORT || 8080);
   app.set('views', __dirname + '/views');
+  app.set('videos', config.video_path);
   app.set('view engine', 'ejs');
   app.use(express.favicon());
   app.use(express.logger('dev'));
